@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/0b38fd6c49.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Dashboard</title>
+</head>
+
+<body>
+
+    <div class="nav-top">
+        <div class="left">
+            <img src="img/menu-close.png" alt="Menu" class="menu-toggler">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="right">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-signature"></i>
+            <div class="user">
+                <img src="img/mike.jpg" alt="Mike" class="mike">
+                <i class="fas fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="nav-side">
+            <img src="img/icon-vue.png" alt="Vue Logo">
+            <i class="fas fa-chart-pie"></i>
+            <i class="far fa-image"></i>
+            <i class="fas fa-cubes"></i>
+            <i class="fas fa-clipboard"></i>
+            <i class="fas fa-puzzle-piece"></i>
+            <i class="fas fa-thumbtack"></i>
+            <i class="fas fa-tools"></i>
+            <i class="fas fa-chart-bar"></i>
+            <i class="fas fa-clock"></i>
+        </div>
+        <main class="main">
+            <div class="big-chart">
+                <div class="left">
+                    <p>Total Shipments</p>
+                    <h1>Performance</h1>
+                </div>
+                <div class="right">
+                    <button class="active">Accounts</button><button>Purchases</button><button>Sessions</button>
+                </div>
+            </div>
+            <div class="statistics">
+                <div class="one">
+                    <div class="top">
+                        <i class="far fa-comments"></i>
+                        <div class="text">
+                            <p>Number</p>
+                            <h1>150GB</h1>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <i class="fas fa-redo"></i>
+                        <p>Update Now</p>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="top">
+                        <i class="far fa-star"></i>
+                        <div class="text">
+                            <p>Followers</p>
+                            <h1>+45K</h1>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <i class="fas fa-signature"></i>
+                        <p>Last Research</p>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="top">
+                        <i class="far fa-user"></i>
+                        <div class="text">
+                            <p>User</p>
+                            <h1>150,000</h1>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <i class="fas fa-trophy"></i>
+                        <p>Customer feedback</p>
+                    </div>
+                </div>
+                <div class="four">
+                    <div class="top">
+                        <i class="fas fa-cubes"></i>
+                        <div class="text">
+                            <p>Errors</p>
+                            <h1>23</h1>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <i class="fas fa-fax"></i>
+                        <p>In the last hour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="smaller-charts">
+                <div class="one">
+                    <p>Total Shipments</p>
+                    <h1>763,215</h1>
+                </div>
+                <div class="two">
+                    <p>Daily Sales</p>
+                    <h1>3,500€</h1>
+                </div>
+                <div class="three">
+                    <p>Completed Tasks</p>
+                    <h1>12,100k</h1>
+                </div>
+            </div>
+            <div class="management">
+                <div class="left">
+                    <div class="heading">
+                        <p>Tasks(<span class="check-count">5</span>)</p>
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="tasks">
+                        <table cellspasing="0">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check">
+                                </td>
+                                <td class="task">
+                                    <h5>Update the Documentation</h5>
+                                    <p>Dwuamish Head, Seattle, WA 8:47 AM</p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check" checked>
+                                </td>
+                                <td class="task">
+                                    <h5>GDPR Compliance</h5>
+                                    <p>The GDPR is a regulation that requires businesses to protect the personal data
+                                        and privacy
+                                        of Europe citizens for transactions that occur within EU member states.
+                                    </p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check">
+                                </td>
+                                <td class="task">
+                                    <h5>Solve the issues</h5>
+                                    <p>Fifty percent of all respondents said they would be more likely to shop at a
+                                        company</p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check">
+                                </td>
+                                <td class="task">
+                                    <h5>Release v2.0.0</h5>
+                                    <p>Export the processed files</p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check">
+                                </td>
+                                <td class="task">
+                                    <h5>Export the processed files</h5>
+                                    <p>The repost also show that consumers will not easily forgive a company once a
+                                        breach
+                                        exposing their personal data occurs.
+                                    </p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="check">
+                                </td>
+                                <td class="task">
+                                    <h5>Arival at export process</h5>
+                                    <p>Capital Hill, Seattle, WA 12:34 AM</p>
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>Management table</p>
+                    <table cellspacing="0">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Job Position</th>
+                            <th>Salary</th>
+                            <th>Milestone</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/tania.jpg" alt="Tabua"></td>
+                            <td>Tania Mike</td>
+                            <td>Developer</td>
+                            <td>25%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/robi.jpg" alt="John"></td>
+                            <td>John Doe</td>
+                            <td>CEO</td>
+                            <td>77%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/lora.jpg" alt="Alexa"></td>
+                            <td>Alexa Mike</td>
+                            <td>Design</td>
+                            <td>41%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/jana.jpg" alt="Jana"></td>
+                            <td>Jana Monday</td>
+                            <td>Marketing</td>
+                            <td>50%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/mike.jpg" alt="Paul"></td>
+                            <td>Paul Dickens</td>
+                            <td>Developer</td>
+                            <td>100%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/emilyz.jpg" alt="Manuela"></td>
+                            <td>Manuela Rico</td>
+                            <td>Manager</td>
+                            <td>15%</td>
+                            <td>&euro;99,225</td>
+                            <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="locations">
+                <div class="left">
+                    <h3>Global Sales by Top Locations</h3>
+                    <p>All Products That Were Shipped</p>
+                    <table cellspacing="0">
+                        <tr>
+                            <td><img src="img/US.png" alt="US Flag"></td>
+                            <td>USA</td>
+                            <td>2.920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/DE.png" alt="DE Flag"></td>
+                            <td>Germany</td>
+                            <td>1.300</td>
+                            <td>20.43%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/AU.png" alt="AU Flag"></td>
+                            <td>Australia</td>
+                            <td>760</td>
+                            <td>10.35%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/GB.png" alt="GB Flag"></td>
+                            <td>United Kingdom</td>
+                            <td>690</td>
+                            <td>7.87%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/RO.png" alt="RO Flag"></td>
+                            <td>Romania</td>
+                            <td>600</td>
+                            <td>5.94%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/BR.png" alt="BR Flag"></td>
+                            <td>Brasil</td>
+                            <td>550</td>
+                            <td>4.34%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right">
+                    <img src="img/world-map.png" alt="World Map">
+                </div>
+            </div>
+            <div class="footer">
+                <div class="left">
+                    <p>Creative Tim</p>
+                    <p>About Us</p>
+                    <p>Blog</p>
+                </div>
+                <div class="right">
+                    <p>&copy;2019, made with love by <span>BinarCode</span> and <span>Creative Tim</span> for a better
+                        web.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

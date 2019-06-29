@@ -1,0 +1,534 @@
+$bg: #1e1e2e;
+$primary: #27293d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 0 2em;
+}
+
+.nav-top {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+
+    .menu-toggler {
+      align-self: center;
+      width: 40px;
+      cursor: pointer;
+      margin-right: 2em;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 100;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 150px;
+
+    .user {
+      cursor: pointer;
+      display: flex;
+    }
+
+    .mike {
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    i {
+      align-self: center;
+      cursor: pointer;
+
+      &:nth-of-type(2) {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #fd5d93;
+          top: -50%;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  .nav-side {
+    position: fixed;
+    width: 80px;
+    background-color: #3da775;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 70%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+      top: 10%;
+    }
+
+    img {
+      width: 50px;
+      cursor: pointer;
+      margin: 1em 0 3em 0;
+    }
+
+    i {
+      font-size: 20px;
+      cursor: pointer;
+
+      &:not(:first-of-type) {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .main {
+    display: grid;
+    min-width: 93%;
+    margin-left: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px 150px 320px 500px 500px 150px;
+    grid-row-gap: 2em;
+
+    .big-chart {
+      background-color: $primary;
+      border-radius: 5px;
+      background-image: url("img/chart-1.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+
+      .left {
+        p {
+          font-size: 0.7em;
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+          font-weight: 100;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+
+      .right {
+        align-self: flex-start;
+
+        button {
+          height: 100%;
+          border: 1px solid #e14eca;
+          background-color: transparent;
+          color: #e14eca;
+          padding: 0.3em 1em;
+          margin: 0 0.1em;
+          border-radius: 5px;
+          font-weight: bold;
+          cursor: pointer;
+
+          &.active {
+            background-color: #c752e6;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .statistics {
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 2em;
+
+      .one,
+      .two,
+      .three,
+      .four {
+        background-color: $primary;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+          position: relative;
+          background: linear-gradient(45deg, #ff6e8a 0%, #ff8578 100%);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          line-height: 2;
+          text-align: center;
+          font-size: 1.5em;
+        }
+
+        .fa-star {
+          background: linear-gradient(45deg, #c253ec 0%, #d94fd3 100%);
+        }
+
+        .fa-user {
+          background: linear-gradient(45deg, #2e64f5 0%, #2182f7 100%);
+        }
+
+        .fa-cubes {
+          background: linear-gradient(45deg, #f0312a 0%, #fa547d 100%);
+        }
+
+        .text {
+          text-align: right;
+
+          p {
+            font-size: 0.7em;
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          h1 {
+            font-weight: 100;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5em;
+            margin-left: 1.5em;
+            position: relative;
+            display: inline-block;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: #2b3553;
+          top: -80%;
+        }
+
+        i {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 12px;
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.6);
+          margin-left: 1em;
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    .smaller-charts {
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 2em;
+
+      .one,
+      .two,
+      .three {
+        background-color: $primary;
+        font-weight: 100;
+        padding: 1em;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+
+        p {
+          font-size: 0.7em;
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+          font-weight: 100;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1.5em;
+          margin-left: 1.5em;
+          position: relative;
+          display: inline-block;
+        }
+      }
+
+      .one {
+        background-image: url("img/chart-2.png");
+
+        h1::before {
+          position: absolute;
+          content: "";
+          background-image: url("img/bell.png");
+          background-size: cover;
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          left: -40%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .two {
+        background-image: url("img/chart-3.png");
+
+        h1::before {
+          position: absolute;
+          content: "";
+          background-image: url("img/truck.png");
+          background-size: cover;
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          left: -40%;
+          transform: translateY(-50%);
+        }
+      }
+      .three {
+        background-image: url("img/chart-4.png");
+
+        h1::before {
+          position: absolute;
+          content: "";
+          background-image: url("img/plane.png");
+          background-size: cover;
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          left: -40%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .management {
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-column-gap: 2em;
+
+      i {
+        cursor: pointer;
+      }
+
+      .left {
+        background-color: $primary;
+        padding: 1em;
+        border-radius: 5px;
+        overflow: auto;
+
+        .heading {
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: "Today";
+              font-size: 0.8em;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -80%;
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+        }
+
+        table {
+          width: 100%;
+          margin-top: 1em;
+        }
+
+        input {
+          margin-right: 1em;
+        }
+
+        .task {
+          padding-right: 2.5em;
+
+          h5 {
+            font-weight: 100;
+          }
+
+          p {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.9em;
+          }
+        }
+
+        td {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 0.2em 0;
+        }
+      }
+
+      .right {
+        background-color: $primary;
+        padding: 1em;
+        border-radius: 5px;
+
+        table {
+          height: 90%;
+          width: 100%;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 0.8em;
+          margin-top: 1em;
+        }
+
+        th {
+          text-align: left;
+          color: rgba(255, 255, 255, 0.8);
+        }
+
+        td {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        img {
+          width: 30px;
+          border-radius: 50%;
+        }
+
+        i {
+          cursor: pointer;
+          margin: 0 5px;
+          font-size: 15px;
+        }
+
+        .gr {
+          color: #01f2c3;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+
+        .rd {
+          color: #fd5475;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+
+    .locations {
+      background-color: $primary;
+      border-radius: 5px;
+      display: flex;
+      padding: 1em;
+
+      .left {
+        width: 50%;
+
+        h3 {
+          font-weight: 100;
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 0.8em;
+        }
+
+        table {
+          width: 100%;
+          height: 70%;
+          margin-top: 1em;
+        }
+
+        td {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      .right {
+        width: 50%;
+        display: flex;
+        align-self: center;
+        padding-left: 1em;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .footer {
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        display: flex;
+        text-transform: uppercase;
+        font-size: 0.8em;
+
+        p {
+          cursor: pointer;
+          transition: color 250ms;
+        }
+
+        p:not(:first-of-type) {
+          margin: 0 1em;
+        }
+
+        p:hover {
+          color: #e14eca;
+        }
+      }
+
+      .right {
+        font-size: 0.8em;
+
+        span {
+          cursor: pointer;
+          color: #ba54f5;
+          transition: color 250ms;
+
+          &:hover {
+            color: #e14eca;
+          }
+        }
+      }
+    }
+  }
+}
