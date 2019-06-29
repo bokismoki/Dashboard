@@ -25,15 +25,16 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .cog-menu-toggler i {
   margin: auto;
   font-size: 2em;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: -webkit-transform 750ms;
+  transition: -webkit-transform 750ms;
+  transition: transform 750ms;
+  transition: transform 750ms, -webkit-transform 750ms;
 }
 
 .cog-menu-toggler i.active {
@@ -44,7 +45,7 @@ body {
 .cog-menu {
   position: fixed;
   background-color: #222a41;
-  top: 0px;
+  top: -150%;
   right: 100px;
   text-align: center;
   min-height: 500px;
@@ -60,16 +61,15 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
-  z-index: -1;
+  z-index: 1;
   opacity: 0;
-  -webkit-transition: top 500ms, opacity 500ms, z-index 500ms;
-  transition: top 500ms, opacity 500ms, z-index 500ms;
+  -webkit-transition: top 750ms, opacity 750ms;
+  transition: top 750ms, opacity 750ms;
 }
 
 .cog-menu.active {
   top: 80px;
   opacity: 1;
-  z-index: 1;
 }
 
 .cog-menu h5 {
@@ -264,7 +264,7 @@ body {
   width: 70%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  top: 10%;
+  top: 90px;
 }
 
 .content .nav-side img {
@@ -285,7 +285,6 @@ body {
 .content .main {
   display: -ms-grid;
   display: grid;
-  min-width: 93%;
   margin-left: 100px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;

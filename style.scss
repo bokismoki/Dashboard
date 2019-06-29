@@ -26,11 +26,12 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   cursor: pointer;
+  z-index: 1;
   
   i {
     margin: auto;
     font-size: 2em;
-    transition: transform 500ms;
+    transition: transform 750ms;
 
     &.active {
       transform: rotate(145deg);
@@ -42,7 +43,7 @@ body {
 .cog-menu {
   position: fixed;
   background-color: #222a41;
-  top: 0px;
+  top: -150%;
   right: 100px;
   text-align: center;
   min-height: 500px;
@@ -52,14 +53,13 @@ body {
   min-width: 300px;
   border-radius: 5px;
   box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.25);
-  z-index: -1;
+  z-index: 1;
   opacity: 0;
-  transition: top 500ms, opacity 500ms, z-index 500ms;
+  transition: top 750ms, opacity 750ms;
 
   &.active {
     top: 80px;
     opacity: 1;
-    z-index: 1;
   }
 
   h5 {
@@ -214,7 +214,7 @@ body {
       width: 70%;
       height: 2px;
       background-color: rgba(255, 255, 255, 0.5);
-      top: 10%;
+      top: 90px;
     }
 
     img {
@@ -236,7 +236,6 @@ body {
   // MAIN
   .main {
     display: grid;
-    min-width: 93%;
     margin-left: 100px;
     grid-template-columns: 1fr;
     grid-template-rows: 320px 150px 320px 500px 500px 150px;
