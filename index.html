@@ -13,6 +13,12 @@
 
 <body>
 
+    <!-- RIGHT COG MENU -->
+    <div class="right-cog-menu">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- NAV-TOP -->
     <div class="nav-top">
         <div class="left">
             <img src="img/menu-close.png" alt="Menu" class="menu-toggler">
@@ -28,7 +34,10 @@
         </div>
     </div>
 
+    <!-- CONTENT -->
     <div class="content">
+
+        <!-- NAV-SIDE -->
         <div class="nav-side">
             <img src="img/icon-vue.png" alt="Vue Logo">
             <i class="fas fa-chart-pie"></i>
@@ -41,7 +50,11 @@
             <i class="fas fa-chart-bar"></i>
             <i class="fas fa-clock"></i>
         </div>
+
+        <!-- MAIN -->
         <main class="main">
+
+            <!-- BIG-CHART -->
             <div class="big-chart">
                 <div class="left">
                     <p>Total Shipments</p>
@@ -51,6 +64,8 @@
                     <button class="active">Accounts</button><button>Purchases</button><button>Sessions</button>
                 </div>
             </div>
+
+            <!-- STATISTICS -->
             <div class="statistics">
                 <div class="one">
                     <div class="top">
@@ -105,6 +120,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SMALLER-CHARTS -->
             <div class="smaller-charts">
                 <div class="one">
                     <p>Total Shipments</p>
@@ -119,17 +136,19 @@
                     <h1>12,100k</h1>
                 </div>
             </div>
+
+            <!-- MANAGEMENT -->
             <div class="management">
                 <div class="left">
                     <div class="heading">
-                        <p>Tasks(<span class="check-count">5</span>)</p>
+                        <p>Tasks finished(<span class="check-count">5</span>)</p>
                         <i class="fas fa-cog"></i>
                     </div>
                     <div class="tasks">
-                        <table cellspasing="0">
+                        <table cellspacing="0">
                             <tr>
                                 <td>
-                                    <input type="checkbox" class="check">
+                                    <input type="checkbox" class="check" checked>
                                 </td>
                                 <td class="task">
                                     <h5>Update the Documentation</h5>
@@ -141,7 +160,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" class="check" checked>
+                                    <input type="checkbox" class="check">
                                 </td>
                                 <td class="task">
                                     <h5>GDPR Compliance</h5>
@@ -224,7 +243,14 @@
                             <td><img src="img/tania.jpg" alt="Tabua"></td>
                             <td>Tania Mike</td>
                             <td>Developer</td>
-                            <td>25%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>25%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
                         </tr>
@@ -232,7 +258,14 @@
                             <td><img src="img/robi.jpg" alt="John"></td>
                             <td>John Doe</td>
                             <td>CEO</td>
-                            <td>77%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>77%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
                         </tr>
@@ -240,7 +273,14 @@
                             <td><img src="img/lora.jpg" alt="Alexa"></td>
                             <td>Alexa Mike</td>
                             <td>Design</td>
-                            <td>41%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>41%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo"></i><i class="fas fa-times"></i></td>
                         </tr>
@@ -248,7 +288,14 @@
                             <td><img src="img/jana.jpg" alt="Jana"></td>
                             <td>Jana Monday</td>
                             <td>Marketing</td>
-                            <td>50%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>50%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
                         </tr>
@@ -256,7 +303,14 @@
                             <td><img src="img/mike.jpg" alt="Paul"></td>
                             <td>Paul Dickens</td>
                             <td>Developer</td>
-                            <td>100%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>100%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
                         </tr>
@@ -264,50 +318,59 @@
                             <td><img src="img/emilyz.jpg" alt="Manuela"></td>
                             <td>Manuela Rico</td>
                             <td>Manager</td>
-                            <td>15%</td>
+                            <td class="salary">
+                                <div class="progress">
+                                    <span>15%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-value"></div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>&euro;99,225</td>
                             <td><i class="fas fa-redo gr"></i><i class="fas fa-times rd"></i></td>
                         </tr>
                     </table>
                 </div>
             </div>
+
+            <!-- LOCATIONS -->
             <div class="locations">
                 <div class="left">
                     <h3>Global Sales by Top Locations</h3>
                     <p>All Products That Were Shipped</p>
                     <table cellspacing="0">
                         <tr>
-                            <td><img src="img/US.png" alt="US Flag"></td>
+                            <td class="us"><img src="img/US.png" alt="US Flag"></td>
                             <td>USA</td>
                             <td>2.920</td>
                             <td>53.23%</td>
                         </tr>
                         <tr>
-                            <td><img src="img/DE.png" alt="DE Flag"></td>
+                            <td class="de"><img src="img/DE.png" alt="DE Flag"></td>
                             <td>Germany</td>
                             <td>1.300</td>
                             <td>20.43%</td>
                         </tr>
                         <tr>
-                            <td><img src="img/AU.png" alt="AU Flag"></td>
+                            <td class="au"><img src="img/AU.png" alt="AU Flag"></td>
                             <td>Australia</td>
                             <td>760</td>
                             <td>10.35%</td>
                         </tr>
                         <tr>
-                            <td><img src="img/GB.png" alt="GB Flag"></td>
+                            <td class="gb"><img src="img/GB.png" alt="GB Flag"></td>
                             <td>United Kingdom</td>
                             <td>690</td>
                             <td>7.87%</td>
                         </tr>
                         <tr>
-                            <td><img src="img/RO.png" alt="RO Flag"></td>
+                            <td class="ro"><img src="img/RO.png" alt="RO Flag"></td>
                             <td>Romania</td>
                             <td>600</td>
                             <td>5.94%</td>
                         </tr>
                         <tr>
-                            <td><img src="img/BR.png" alt="BR Flag"></td>
+                            <td class="br"><img src="img/BR.png" alt="BR Flag"></td>
                             <td>Brasil</td>
                             <td>550</td>
                             <td>4.34%</td>
@@ -318,6 +381,8 @@
                     <img src="img/world-map.png" alt="World Map">
                 </div>
             </div>
+
+            <!-- FOOTER -->
             <div class="footer">
                 <div class="left">
                     <p>Creative Tim</p>
