@@ -1,9 +1,11 @@
-// RIGHT-COG-MENU TOGGLE "ACTIVE" CLASS ON CLICK
-const rightCogMenu = document.querySelector(".right-cog-menu");
-const rightCogMenuCog = document.querySelector(".right-cog-menu i");
+// COG-MENU TOGGLE "ACTIVE" CLASS ON CLICK   +   // SHOW COG-MENU ONCE TOGGLER GETS "ACTIVE" CLASS
+const cogMenuToggler = document.querySelector(".cog-menu-toggler");
+const cogMenuTogglerCog = document.querySelector(".cog-menu-toggler i");
+const cogMenu = document.querySelector(".cog-menu");
 
-rightCogMenu.addEventListener("click", () => {
-    rightCogMenuCog.classList.toggle("active");
+cogMenuToggler.addEventListener("click", () => {
+    cogMenuTogglerCog.classList.toggle("active");
+    cogMenu.classList.toggle("active");
 });
 
 // BIG-CHART BUTTON "ACTIVE" CLASS SWITCH ON DIFFERENT BUTTON CLICK
@@ -36,14 +38,14 @@ checkboxInputs.forEach(checkbox => {
 })
 
 // ONLOAD UNCHECK ALL CHECKBOXES
-const UncheckAll = () => {
+const uncheckAll = () => {
     for (let i = 0; i < checkboxInputs.length; i++) {
         if (checkboxInputs[i].type === 'checkbox') {
             checkboxInputs[i].checked = false;
         }
     }
 }
-document.addEventListener("load", UncheckAll());
+document.addEventListener("load", uncheckAll());
 
 // ADD WIDTHS OF EACH (.SALARY .PROGRESS-VALUE) DEPENDING ON WHATS INSIDE OF THE (.SALARY SPAN) IN MANAGEMENT SECTION
 const salarys = document.querySelectorAll(".salary span");

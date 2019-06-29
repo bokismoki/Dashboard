@@ -14,8 +14,8 @@ body {
   padding: 0 2em;
 }
 
-// RIGHT-COG-MENU
-.right-cog-menu {
+// COG-MENU-TOGGLER
+.cog-menu-toggler {
   position: fixed;
   right: 0;
   top: 150px;
@@ -34,6 +34,97 @@ body {
 
     &.active {
       transform: rotate(145deg);
+    }
+  }
+}
+
+// COG-MENU
+.cog-menu {
+  position: fixed;
+  background-color: #222a41;
+  top: 0px;
+  right: 100px;
+  text-align: center;
+  min-height: 500px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.25);
+  z-index: -1;
+  opacity: 0;
+  transition: top 500ms, opacity 500ms, z-index 500ms;
+
+  &.active {
+    top: 80px;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    margin: 1em 0;
+    font-weight: 600;
+
+    &:last-of-type {
+      margin-top: 5em;
+    }
+  }
+
+  .colors {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    .color {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0 .3em;
+      cursor: pointer;
+    }
+  }
+
+  a {
+    background-color: red;
+    width: 100%;
+    border-radius: 50px;
+    height: 45px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom left,#344675,#263148,#344675);
+    position: relative;
+    transition: top 250ms;
+
+    &:hover {
+      top: -1px;
+    }
+
+    &:nth-of-type(2) {
+      background: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+    }
+
+    &:nth-of-type(3) {
+      background: linear-gradient(to bottom left,#1d8cf8,#3358f4,#1d8cf8);
+    }
+  }
+
+  .socials {
+    display: flex;
+    margin: 0 10px;
+    justify-content: center;
+
+    a{
+      width: 40%;
+      margin: 0 2px;
+      background: linear-gradient(to bottom left,#1d8cf8,#3358f4,#1d8cf8);
     }
   }
 }
@@ -187,6 +278,7 @@ body {
           border-radius: 5px;
           font-weight: bold;
           cursor: pointer;
+          outline: none;
 
           &.active {
             background-color: #c752e6;
@@ -636,6 +728,7 @@ body {
         padding-left: 1em;
 
         img {
+          width: 100%;
           margin: 0 auto;
           max-width: 1000px;
           max-height: 480px;
