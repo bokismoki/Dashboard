@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/0b38fd6c49.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Vue Dashboard</title>
@@ -83,6 +84,9 @@
                 <div class="right">
                     <button class="active">Accounts</button><button>Purchases</button><button>Sessions</button>
                 </div>
+                <div class="big-chart-container">
+                    <canvas id="big-chart-chart"></canvas>
+                </div>
             </div>
 
             <!-- STATISTICS -->
@@ -146,14 +150,23 @@
                 <div class="one">
                     <p>Total Shipments</p>
                     <h1>763,215</h1>
+                    <div class="small-chart-container">
+                        <canvas id="small-chart-chart-1"></canvas>
+                    </div>
                 </div>
                 <div class="two">
                     <p>Daily Sales</p>
                     <h1>3,500€</h1>
+                    <div class="small-chart-container">
+                        <canvas id="small-chart-chart-2"></canvas>
+                    </div>
                 </div>
                 <div class="three">
                     <p>Completed Tasks</p>
                     <h1>12,100k</h1>
+                    <div class="small-chart-container">
+                        <canvas id="small-chart-chart-3"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -418,7 +431,8 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

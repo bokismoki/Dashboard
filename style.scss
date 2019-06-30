@@ -1,5 +1,6 @@
 $bg: #1e1e2e;
 $primary: #27293d;
+$white: #fff;
 
 * {
   margin: 0;
@@ -9,7 +10,7 @@ $primary: #27293d;
 
 body {
   background-color: $bg;
-  color: #fff;
+  color: $white;
   font-family: "Poppins", sans-serif;
   padding: 0 2em;
 }
@@ -27,7 +28,7 @@ body {
   border-bottom-left-radius: 10px;
   cursor: pointer;
   z-index: 1;
-  
+
   i {
     margin: auto;
     font-size: 2em;
@@ -52,7 +53,7 @@ body {
   flex-direction: column;
   min-width: 300px;
   border-radius: 5px;
-  box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
   z-index: 1;
   opacity: 0;
   transition: top 750ms, opacity 750ms;
@@ -76,15 +77,15 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
+  }
 
-    .color {
-      width: 20px;
-      height: 20px;
-      background-color: #fff;
-      border-radius: 50%;
-      margin: 0 .3em;
-      cursor: pointer;
-    }
+  .color {
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 50%;
+    margin: 0 0.3em;
+    cursor: pointer;
   }
 
   a {
@@ -92,14 +93,14 @@ body {
     width: 100%;
     border-radius: 50px;
     height: 45px;
-    color: #fff;
+    color: $white;
     text-decoration: none;
     font-weight: 600;
-    margin: .5em 0;
+    margin: 0.5em 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom left,#344675,#263148,#344675);
+    background: linear-gradient(to bottom left, #344675, #263148, #344675);
     position: relative;
     transition: top 250ms;
 
@@ -108,11 +109,11 @@ body {
     }
 
     &:nth-of-type(2) {
-      background: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+      background: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
     }
 
     &:nth-of-type(3) {
-      background: linear-gradient(to bottom left,#1d8cf8,#3358f4,#1d8cf8);
+      background: linear-gradient(to bottom left, #1d8cf8, #3358f4, #1d8cf8);
     }
   }
 
@@ -121,10 +122,10 @@ body {
     margin: 0 10px;
     justify-content: center;
 
-    a{
+    a {
       width: 40%;
       margin: 0 2px;
-      background: linear-gradient(to bottom left,#1d8cf8,#3358f4,#1d8cf8);
+      background: linear-gradient(to bottom left, #1d8cf8, #3358f4, #1d8cf8);
     }
   }
 }
@@ -139,13 +140,6 @@ body {
   .left {
     display: flex;
 
-    .menu-toggler {
-      align-self: center;
-      width: 40px;
-      cursor: pointer;
-      margin-right: 2em;
-    }
-
     h1 {
       text-transform: uppercase;
       font-size: 1em;
@@ -155,22 +149,18 @@ body {
     }
   }
 
+  .menu-toggler {
+    align-self: center;
+    width: 40px;
+    cursor: pointer;
+    margin-right: 2em;
+  }
+
   .right {
     display: flex;
     align-self: center;
     justify-content: space-between;
     width: 150px;
-
-    .user {
-      cursor: pointer;
-      display: flex;
-    }
-
-    .mike {
-      width: 30px;
-      border-radius: 50%;
-      margin-right: 5px;
-    }
 
     i {
       align-self: center;
@@ -191,11 +181,21 @@ body {
       }
     }
   }
+
+  .user {
+    cursor: pointer;
+    display: flex;
+  }
+
+  .mike {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 }
 
 // CONTENT
 .content {
-
   // NAV-SIDE
   .nav-side {
     position: fixed;
@@ -245,12 +245,10 @@ body {
     .big-chart {
       background-color: $primary;
       border-radius: 5px;
-      background-image: url("img/chart-1.png");
-      background-repeat: no-repeat;
-      background-position: bottom;
       display: flex;
       justify-content: space-between;
       padding: 1em;
+      position: relative;
 
       .left {
         p {
@@ -281,9 +279,23 @@ body {
 
           &.active {
             background-color: #c752e6;
-            color: #fff;
+            color: $white;
           }
         }
+      }
+
+      .big-chart-container {
+        width: 100%;
+        height: 230px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #big-chart-chart {
+        width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
       }
     }
 
@@ -392,9 +404,7 @@ body {
         background-color: $primary;
         font-weight: 100;
         padding: 1em;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
+        position: relative;
 
         p {
           font-size: 0.7em;
@@ -409,11 +419,23 @@ body {
           position: relative;
           display: inline-block;
         }
+
+        .small-chart-container {
+          width: 100%;
+          height: 230px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+  
+        #small-chart-chart-1, #small-chart-chart-2, #small-chart-chart-3 {
+          width: 100%;
+          max-height: 100%;
+          margin: 0 auto;
+        }
       }
 
       .one {
-        background-image: url("img/chart-2.png");
-
         h1::before {
           position: absolute;
           content: "";
@@ -428,8 +450,6 @@ body {
       }
 
       .two {
-        background-image: url("img/chart-3.png");
-
         h1::before {
           position: absolute;
           content: "";
@@ -442,9 +462,8 @@ body {
           transform: translateY(-50%);
         }
       }
-      .three {
-        background-image: url("img/chart-4.png");
 
+      .three {
         h1::before {
           position: absolute;
           content: "";

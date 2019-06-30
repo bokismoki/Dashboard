@@ -92,12 +92,12 @@ body {
   margin-bottom: 2em;
 }
 
-.cog-menu .colors .color {
+.cog-menu .color {
   width: 20px;
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-  margin: 0 .3em;
+  margin: 0 0.3em;
   cursor: pointer;
 }
 
@@ -109,7 +109,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  margin: .5em 0;
+  margin: 0.5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,15 +174,6 @@ body {
   display: flex;
 }
 
-.nav-top .left .menu-toggler {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 40px;
-  cursor: pointer;
-  margin-right: 2em;
-}
-
 .nav-top .left h1 {
   text-transform: uppercase;
   font-size: 1em;
@@ -191,6 +182,15 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   cursor: pointer;
+}
+
+.nav-top .menu-toggler {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40px;
+  cursor: pointer;
+  margin-right: 2em;
 }
 
 .nav-top .right {
@@ -203,19 +203,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 150px;
-}
-
-.nav-top .right .user {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.nav-top .right .mike {
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 5px;
 }
 
 .nav-top .right i {
@@ -237,6 +224,19 @@ body {
   border-radius: 50%;
   background-color: #fd5d93;
   top: -50%;
+}
+
+.nav-top .user {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-top .mike {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 .content .nav-side {
@@ -296,9 +296,6 @@ body {
 .content .main .big-chart {
   background-color: #27293d;
   border-radius: 5px;
-  background-image: url("img/chart-1.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,6 +303,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1em;
+  position: relative;
 }
 
 .content .main .big-chart .left p {
@@ -339,6 +337,20 @@ body {
 .content .main .big-chart .right button.active {
   background-color: #c752e6;
   color: #fff;
+}
+
+.content .main .big-chart .big-chart-container {
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content .main .big-chart #big-chart-chart {
+  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
 }
 
 .content .main .statistics {
@@ -466,9 +478,7 @@ body {
   background-color: #27293d;
   font-weight: 100;
   padding: 1em;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
+  position: relative;
 }
 
 .content .main .smaller-charts .one p,
@@ -489,8 +499,26 @@ body {
   display: inline-block;
 }
 
-.content .main .smaller-charts .one {
-  background-image: url("img/chart-2.png");
+.content .main .smaller-charts .one .small-chart-container,
+.content .main .smaller-charts .two .small-chart-container,
+.content .main .smaller-charts .three .small-chart-container {
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content .main .smaller-charts .one #small-chart-chart-1, .content .main .smaller-charts .one #small-chart-chart-2, .content .main .smaller-charts .one #small-chart-chart-3,
+.content .main .smaller-charts .two #small-chart-chart-1,
+.content .main .smaller-charts .two #small-chart-chart-2,
+.content .main .smaller-charts .two #small-chart-chart-3,
+.content .main .smaller-charts .three #small-chart-chart-1,
+.content .main .smaller-charts .three #small-chart-chart-2,
+.content .main .smaller-charts .three #small-chart-chart-3 {
+  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
 }
 
 .content .main .smaller-charts .one h1::before {
@@ -506,10 +534,6 @@ body {
           transform: translateY(-50%);
 }
 
-.content .main .smaller-charts .two {
-  background-image: url("img/chart-3.png");
-}
-
 .content .main .smaller-charts .two h1::before {
   position: absolute;
   content: "";
@@ -521,10 +545,6 @@ body {
   left: -40%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.content .main .smaller-charts .three {
-  background-image: url("img/chart-4.png");
 }
 
 .content .main .smaller-charts .three h1::before {
