@@ -229,7 +229,7 @@ body {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     z-index: 1;
-    transition: width 500ms;
+    transition: width 500ms, left 500ms;
 
     &::before {
       position: absolute;

@@ -278,8 +278,8 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   z-index: 1;
-  -webkit-transition: width 500ms;
-  transition: width 500ms;
+  -webkit-transition: width 500ms, left 500ms;
+  transition: width 500ms, left 500ms;
 }
 
 .content .nav-side::before {
