@@ -1,3 +1,10 @@
+// TOGGLE SIDE-NAV ON MENU-TOGGLER CLICK
+const menuToggler = document.querySelector(".menu-toggler");
+
+menuToggler.addEventListener("click", () => {
+    navSide.classList.toggle("show");
+});
+
 // COG-MENU TOGGLE "ACTIVE" CLASS ON CLICK   +   // SHOW COG-MENU ONCE TOGGLER GETS "ACTIVE" CLASS
 const cogMenuToggler = document.querySelector(".cog-menu-toggler");
 const cogMenuTogglerCog = document.querySelector(".cog-menu-toggler i");
@@ -6,6 +13,26 @@ const cogMenu = document.querySelector(".cog-menu");
 cogMenuToggler.addEventListener("click", () => {
     cogMenuTogglerCog.classList.toggle("active");
     cogMenu.classList.toggle("active");
+});
+
+// CHANGE NAV-SIDE'S BACKGROUND COLOR ON DIFFERENT "COLOR" BTN CLICK
+const navSide = document.querySelector(".nav-side");
+const colorBtns = document.querySelectorAll(".color");
+
+colorBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.classList.contains("default")) {
+            navSide.style.background = "linear-gradient(45deg, #39986a 0%,#42b883 100%)";
+        } else if (btn.classList.contains("pink")) {
+            navSide.style.background = "linear-gradient(45deg, #bf53f0 0%,#e04ecb 100%)";
+        } else if (btn.classList.contains("blue")) {
+            navSide.style.background = "linear-gradient(45deg, #305ef4 0%,#1d8cf8 100%)";
+        } else if (btn.classList.contains("orange")) {
+            navSide.style.background = "linear-gradient(45deg, #ff698d 0%,#ff8c73 100%)";
+        } else if (btn.classList.contains("red")) {
+            navSide.style.background = "linear-gradient(45deg, #fd5c91 0%,#ee2b1c 100%)";
+        }
+    });
 });
 
 // BIG-CHART BUTTON "ACTIVE" CLASS SWITCH ON DIFFERENT BUTTON CLICK
