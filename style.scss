@@ -16,6 +16,33 @@ body {
   min-width: 500px;
 }
 
+// EDITABLE-CONTENT-MODAL
+.editable-content-modal {
+  position: fixed;
+  background-color: #b638ff;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  padding: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5);
+
+  &.show {
+    display: flex;
+  }
+
+  h2 {
+    margin: auto;
+    letter-spacing: 1px;
+  }
+}
+
 // COG-MENU-TOGGLER
 .cog-menu-toggler {
   position: fixed;

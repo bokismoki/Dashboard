@@ -62,7 +62,52 @@ checkboxInputs.forEach(checkbox => {
             checkCount.innerHTML = counter;
         }
     });
-})
+});
+
+// MAKE CONTENT EDITABLE ON PEN CLICK IN MANAGEMENT TASKS SECTION + // EDITABLE-CONTENT-MODAL POPUP ON PEN CLICK
+const pens = document.querySelectorAll(".fa-pencil-alt");
+const editableContentModal = document.querySelector(".editable-content-modal");
+
+pens.forEach(pen => {
+    pen.addEventListener("click", e => {
+
+        pens.forEach(pen => {
+            pen.parentElement.previousElementSibling.children[0].contentEditable = "false";
+            pen.parentElement.previousElementSibling.children[1].contentEditable = "false";
+        });
+
+        editableContentModal.classList.add("show");
+        setTimeout(() => {
+            editableContentModal.classList.remove("show");
+        }, 1000);
+
+        e.target.parentElement.previousElementSibling.children[0].contentEditable = "true";
+        e.target.parentElement.previousElementSibling.children[1].contentEditable = "true";
+
+    });
+});
+
+// ON ENTER, TASK HEADING AND TASK PARAGRAPH SHOULDNT BE EDITABLE ANYMORE
+const tasksH = document.querySelectorAll(".task h5");
+const tasksP = document.querySelectorAll(".task p");
+
+tasksH.forEach(h => {
+    h.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            e.target.contentEditable = "false";
+            e.target.nextElementSibling.contentEditable = "false";
+        }
+    });
+});
+
+tasksP.forEach(p => {
+    p.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            e.target.contentEditable = "false";
+            e.target.previousElementSibling.contentEditable = "false";
+        }
+    });
+});
 
 // ONLOAD UNCHECK ALL CHECKBOXES
 const uncheckAll = () => {
