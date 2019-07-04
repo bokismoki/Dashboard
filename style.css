@@ -49,7 +49,7 @@ body {
   position: fixed;
   right: 0;
   top: 150px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 80px;
   height: 60px;
   display: -webkit-box;
@@ -306,7 +306,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   z-index: 1;
@@ -341,44 +341,19 @@ body {
   margin-top: 2em;
 }
 
-.content .nav-side i::after {
+.content .nav-side i:hover::after {
   position: absolute;
   content: "Lorem Ipsum";
   bottom: -120%;
-  font-size: 14px;
+  font-size: 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
   cursor: default;
   color: rgba(255, 255, 255, 0.7);
-}
-
-.content .nav-side:hover {
-  width: 200px;
-}
-
-.content .nav-side:hover i {
-  font-size: 25px;
-}
-
-.content .nav-side:hover i::after {
-  position: absolute;
-  content: "Lorem Ipsum";
-  bottom: -120%;
-  font-size: 14px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 1;
 }
 
 .content .main {
@@ -403,6 +378,11 @@ body {
           justify-content: space-between;
   padding: 1em;
   position: relative;
+}
+
+.content .main .big-chart .left {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .content .main .big-chart .left p {
@@ -1003,6 +983,17 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .nav-top {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #1e1e2e;
+    padding: 0 2em;
+  }
+  .content {
+    padding-top: 5em;
+  }
   .content .nav-side {
     left: -50%;
   }
@@ -1069,6 +1060,24 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .content .main .management .task {
+    text-align: left;
+  }
+  .content .main .management .right th:nth-of-type(5) {
+    display: none;
+  }
+  .content .main .management .right td {
+    text-align: left;
+  }
+  .content .main .management .right td:nth-of-type(5) {
+    display: none;
+  }
+  .content .main .management .right img {
+    margin-right: 10px;
+  }
+  .content .main .locations td {
+    text-align: left;
+  }
   .content .main .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1082,6 +1091,29 @@ body {
   .content .main .right {
     margin: 1em 0;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .content .main {
+    -ms-grid-rows: 370px 700px 1000px 1000px 900px 150px;
+        grid-template-rows: 370px 700px 1000px 1000px 900px 150px;
+  }
+  .content .main .big-chart .right {
+    width: 40%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+  }
+  .content .main .big-chart button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 10px 0 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

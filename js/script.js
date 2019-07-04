@@ -138,6 +138,13 @@ const managementRight = document.querySelector(".management .right");
 
 managementRight.addEventListener("click", e => {
     if (e.target.classList.contains("fa-times")) {
-        e.target.parentNode.parentNode.style.opacity = "0.1";
+        e.target.parentElement.parentElement.style.opacity = "0.1";
+    }
+});
+
+// RETURN TARGETED TR ON REDO-ICON CLICK IN MANAGEMENT SECTION
+managementRight.addEventListener("click", e => {
+    if (e.target.classList.contains("fa-redo")) {
+        e.target.parentElement.parentElement.style.opacity = "1";
     }
 });
