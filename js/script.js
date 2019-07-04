@@ -79,7 +79,7 @@ pens.forEach(pen => {
         editableContentModal.classList.add("show");
         setTimeout(() => {
             editableContentModal.classList.remove("show");
-        }, 1000);
+        }, 1500);
 
         e.target.parentElement.previousElementSibling.children[0].contentEditable = "true";
         e.target.parentElement.previousElementSibling.children[1].contentEditable = "true";

@@ -25,9 +25,9 @@ body {
   height: 100px;
   display: flex;
   padding: 1em;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 2;
   border-radius: 5px;
   display: none;
